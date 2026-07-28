@@ -17,7 +17,7 @@ export default function Footer() {
 
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-10 sm:flex-row sm:items-center">
         <div>
-          <div className="font-display text-lg font-extrabold">Laughing Wallet</div>
+          <div className="font-display text-lg font-extrabold">The Laughing Wallet</div>
           <p className="mt-1 max-w-sm text-sm text-white/60">
             Money made simple, and kind of funny. One plan, every goal, a better
             future.

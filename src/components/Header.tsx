@@ -13,7 +13,7 @@ export default function Header() {
             👛
           </span>
           <span className="font-display text-lg font-extrabold tracking-tight text-ink">
-            Laughing Wallet
+            The Laughing Wallet
           </span>
         </Link>
 

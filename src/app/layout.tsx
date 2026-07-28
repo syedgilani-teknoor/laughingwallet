@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Laughing Wallet — money made simple, and kind of funny",
+  title: "The Laughing Wallet — money made simple, and kind of funny",
   description:
     "Short cartoon videos and simple planning tools that walk you through every money milestone, from your first apartment to a confident retirement.",
 };

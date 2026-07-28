@@ -29,7 +29,7 @@ export default config({
   storage,
 
   ui: {
-    brand: { name: "Laughing Wallet" },
+    brand: { name: "The Laughing Wallet" },
   },
 
   collections: {

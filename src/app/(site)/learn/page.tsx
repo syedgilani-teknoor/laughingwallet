@@ -4,7 +4,7 @@ import { reader, youTubeId } from "@/lib/reader";
 import VideoCard from "@/components/VideoCard";
 
 export const metadata: Metadata = {
-  title: "Watch & Learn — Laughing Wallet",
+  title: "Watch & Learn — TheLaughing Wallet",
   description:
     "Short cartoon videos and plain-language guides for every money milestone.",
 };

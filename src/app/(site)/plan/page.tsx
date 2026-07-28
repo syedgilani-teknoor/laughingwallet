@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SavingsCalculator from "@/components/SavingsCalculator";
 
 export const metadata: Metadata = {
-  title: "Savings planner — Laughing Wallet",
+  title: "Savings planner — The Laughing Wallet",
   description:
     "See what steady monthly saving could grow into over time. A simple, no-signup savings projector.",
 };
