@@ -10,12 +10,23 @@ const STAGE_OPTIONS = [
   { label: "Retire With Confidence", value: "retire-with-confidence" },
 ] as const;
 
+// Storage switches on an env var so the same code works everywhere:
+//   - Local dev (no env var set)  -> writes .yaml files on disk, as before.
+//   - Production on Vercel        -> set NEXT_PUBLIC_KEYSTATIC_STORAGE_KIND=github
+//     (plus the three KEYSTATIC_GITHUB_* / KEYSTATIC_SECRET vars) and the CMS
+//     commits straight to the repo, triggering a redeploy.
+// Until that env var is set, the build stays on local storage and never fails
+// for missing GitHub credentials.
+const storage =
+  process.env.NEXT_PUBLIC_KEYSTATIC_STORAGE_KIND === "github"
+    ? ({
+        kind: "github",
+        repo: { owner: "syedgilani-teknoor", name: "laughingwallet" },
+      } as const)
+    : ({ kind: "local" } as const);
+
 export default config({
-  // Local storage reads/writes files on your machine during development.
-  // To let a non-technical editor publish from the hosted site, switch this
-  // to GitHub storage once the repo is up, e.g.:
-  //   storage: { kind: "github", repo: "your-org/laughing-wallet" }
-  storage: { kind: "local" },
+  storage,
 
   ui: {
     brand: { name: "Laughing Wallet" },
